@@ -22,6 +22,7 @@
   },
   "include": [
     "src",
-    ["src/components", "custom.d.ts"]
+    "src/components", 
+    "src/custom.d.ts"
   ]
 }
