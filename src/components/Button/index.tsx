@@ -1,13 +1,22 @@
 import './style.scss'
+import { useNavigate } from 'react-router-dom';
 
 interface LabeledValue {
-  onClick: any;
+  value: any;
   children: any;
 }
-function Button({onClick, children}: LabeledValue){
+
+function Button({value, children}: LabeledValue){
+
+  const navigate = useNavigate() 
+
+  const handleRouterButtons = () =>{
+    console.log(value)
+    navigate('./')
+  }
   return(
     <>
-      <button className='btn' onClick={onClick}>
+      <button className='btn' onClick={handleRouterButtons}>
         {children}
       </button>
     </>
