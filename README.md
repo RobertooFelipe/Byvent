@@ -6,12 +6,12 @@
 
 O sistema será composto pelos seguintes ambientes:
 
-Área de login
-Criação de eventos
-Eventos ativos
-Dashboard
-Meus ingressos
-Minha carteira
+- Área de login
+- Criação de eventos
+- Eventos ativos
+- Dashboard
+- Meus ingressos
+- Minha carteira
 
 #### Área de login
 Ambiente onde o usuário irá realizar seu login para o sistema, ou em caso de não ter conta, realizar seu cadastro.
