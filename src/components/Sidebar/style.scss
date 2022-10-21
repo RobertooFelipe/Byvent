@@ -1,3 +1,5 @@
+@import "/src/styles/colors";
+
 .positionElements{
   display: flex;
   flex-direction: column;
@@ -5,12 +7,14 @@
 }
 
 .containerToolbar{
-  background-color: #06112B;
+  background-color: $darkBlueColor;
   width: 90px;
   height: 100vh;
   border-radius: 0 30px 30px 0;
 
-  justify-content: space-around;
+  position: fixed;
+
+  justify-content: space-between;
 
   img{
     height: 40px;
@@ -21,4 +25,8 @@
       margin: 10px;
     }
   }
+}
+
+.solitBtn{
+  margin: 20% 0;
 }

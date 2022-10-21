@@ -6,34 +6,34 @@ import backIcon from '../../assets/images/icon_back.svg'
 import dashboardIcon from '../../assets/images/icon_dashboard.svg'
 import ticketIcon from '../../assets/images/icon_ticket.svg'
 import listIcon from '../../assets/images/icon_list.svg'
-import Button from '../Button'
+import NavButton from '../NavButton'
 
 function Sidebar(){
 
   return(
     <div className='containerToolbar positionElements'>
-      <div className='positionElements'>
+      <div className='positionElements solitBtn'>
         <img src={logo} alt="Byvent Logo" />
       </div>
       <div className='positionElements'>
-        <Button value='add'>
+        <NavButton route='/addEvent'>
           <img src={addIcon} alt="Byvent Logo" />
-        </Button>
-        <Button value='handleListPageRouter'>
+        </NavButton>
+        <NavButton route='/allEvents'>
           <img src={listIcon} alt="Byvent Logo" />
-        </Button>
-        <Button value='handleDashboardPageRouter'>
+        </NavButton>
+        <NavButton route='/dashboard'>
           <img src={dashboardIcon} alt="Byvent Logo" />
-        </Button>
-        <Button value='handleTicketsPageRouter'>
+        </NavButton>
+        <NavButton route='/myTickets'>
           <img src={ticketIcon} alt="Byvent Logo" />
-        </Button>
+        </NavButton>
       </div>
 
-      <div className='positionElements'>
-        <Button value='handleLogoutPageRouter'>
+      <div className='positionElements solitBtn'>
+        <NavButton route='/'>
           <img src={backIcon} alt="Byvent Logo" />
-        </Button>
+        </NavButton>
       </div>
     </div>
   )
