@@ -1,26 +1,23 @@
 import './style.scss'
 import { useNavigate } from 'react-router-dom';
+import { ButtonHTMLAttributes } from 'react'
 
-interface LabeledValue {
-  value: any;
-  children: any;
+interface LabeledValue extends ButtonHTMLAttributes<HTMLButtonElement>{
+  route: string;
 }
 
-function Button({value, children}: LabeledValue){
+function NavButton({route, children }: LabeledValue){
 
   const navigate = useNavigate() 
 
   const handleRouterButtons = () =>{
-    console.log(value)
-    navigate('./')
+    navigate(route)
   }
   return(
-    <>
       <button className='btn' onClick={handleRouterButtons}>
         {children}
       </button>
-    </>
   )
 }
 
-export default Button
+export default NavButton
