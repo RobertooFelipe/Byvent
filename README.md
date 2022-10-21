@@ -1,6 +1,7 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/58612048/196828245-ce9bd686-38a9-46dc-a498-59e1eb13ad67.png">
+</p>
 
-
-![Byvent Logo](https://user-images.githubusercontent.com/58612048/196828245-ce9bd686-38a9-46dc-a498-59e1eb13ad67.png)
 
 # **Ambientes**
 
