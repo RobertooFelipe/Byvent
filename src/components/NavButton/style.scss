@@ -1,0 +1,16 @@
+@import "/src/styles/colors";
+
+.btn{
+  background: $gradientBlue;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+
+  border-style: none;
+  border-radius: 10px;
+
+  color: $whiteColor;
+}
