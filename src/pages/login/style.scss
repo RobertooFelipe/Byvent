@@ -3,22 +3,22 @@
 .backgroundLogin{
   background: $gradientBlue !important;
   background-size: 300% 300%;
-
   display: flex;
   justify-content: center;
+
   align-items: center;
 
   section{
     background: $gradientLight;
     width: 400px;
     height: 450px;
-
     border-radius: 30px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
     
     h1{
@@ -26,6 +26,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 3rem;
+      
       margin: 10% 0;
     }
   }

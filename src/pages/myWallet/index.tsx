@@ -6,7 +6,9 @@ function MyWallet() {
     <div className='containerApp'>
       <Sidebar />
       <section className='contentPage'>
-        <h1>Minha carteira...</h1>
+        <div>
+          <h1>Minha carteira...</h1>
+        </div>
       </section>
     </div>
   );

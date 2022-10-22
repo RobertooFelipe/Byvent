@@ -6,7 +6,9 @@ function MyTickets() {
     <div className='containerApp'>
       <Sidebar />
       <section className='contentPage'>
-        <h1>Meus tickets...</h1>
+        <div>
+          <h1>Meus tickets...</h1>
+        </div>
       </section>
     </div>
   );
