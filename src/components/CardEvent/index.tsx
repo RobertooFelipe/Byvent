@@ -1,6 +1,6 @@
 import './style.scss'
 
-import ButtonDetails from '../ButtonDetails'
+import NavButton from '../NavButton'
 
 interface ICardEventProps{
   id_event: number;
@@ -19,9 +19,9 @@ function CardEvent({id_event, eventName, imgSrc, eventDate}:ICardEventProps){
           <h2>{eventDate}</h2>  
         </div>
         <div>
-          <ButtonDetails 
-            id_event={id_event}
-          />
+          <NavButton route='/eventDetails' id_event={id_event}>
+            Detalhes
+          </NavButton>
         </div>
       </footer>   
     </section>
