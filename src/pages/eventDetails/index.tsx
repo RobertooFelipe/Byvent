@@ -6,9 +6,9 @@ function EventDetails() {
     <div className='containerApp'>
       <Sidebar />
       <section className='contentPage'>
-        <div>
+        <header>
           <h1>Detalhes evento...</h1>
-        </div>
+        </header>
       </section>
     </div>
   );

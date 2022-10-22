@@ -6,9 +6,9 @@ function AddEvent() {
     <div className='containerApp'>
       <Sidebar />
       <section className='contentPage'>
-        <div>
+        <header>
           <h1>Criando item...</h1>
-        </div>
+        </header>
       </section>
     </div>
   );
