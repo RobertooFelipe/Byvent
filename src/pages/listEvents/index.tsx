@@ -1,6 +1,7 @@
 import './style.scss';
 import Sidebar from '../../components/Sidebar'
 import CardEvent from '../../components/CardEvent';
+import SearchItem from '../../components/SearchItem'
 
 import {default as dataEvents} from '../../events.json'
 import { useState } from 'react'
@@ -21,9 +22,10 @@ function ListEvents() {
     <div className='containerApp'>
       <Sidebar />
       <section className='contentPage'>
-        <div>
+        <header className='headerPositionContent'>
           <h1>Listando todos eventos...</h1>
-        </div>
+          <SearchItem/>
+        </header>
         <div className='containerEvents'>
           <>
             {

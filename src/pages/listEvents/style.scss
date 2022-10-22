@@ -11,3 +11,13 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
+.headerPositionContent{
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+    flex-direction: column;
+  }
+}
