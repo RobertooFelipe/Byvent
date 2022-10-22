@@ -20,8 +20,8 @@ function AddEvent() {
             </div>
             <div className='inlineOption'>
               <div>
-                <h2>Data do evento</h2>
-                <input type="date" />
+                <h2>Valor ingresso</h2>
+                <input type="number" min="0.00" max="10000.00" placeholder='R$10,00'/>
               </div>
               <div>
                 <h2>Data do evento</h2>

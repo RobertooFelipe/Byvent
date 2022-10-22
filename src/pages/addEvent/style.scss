@@ -44,6 +44,7 @@
   justify-content: center;
   gap: 50px;
   margin-top: 40px;
+  white-space: nowrap;
 
   @media (max-width: 1082px) {
     margin-left: 0;
@@ -64,10 +65,11 @@
     border-style: none;
     border-radius: 30px;
     padding: 11px;
-
     border: solid 2px $darkBlueColor;
+
     font-size: 18px;
     width: 100%;
+    resize: none;
   }
 }
 
