@@ -1,12 +1,15 @@
 import './style.scss'
 
-interface CardEventTypes{
+import ButtonDetails from '../ButtonDetails'
+
+interface ICardEventProps{
+  id_event: number;
   eventName: string;
   imgSrc: string;
   eventDate: string;
 }
 
-function CardEvent({eventName, imgSrc, eventDate}:CardEventTypes){
+function CardEvent({id_event, eventName, imgSrc, eventDate}:ICardEventProps){
   return(
     <section className='cardEvent'>
       <img src={imgSrc} alt={eventName} />
@@ -16,7 +19,9 @@ function CardEvent({eventName, imgSrc, eventDate}:CardEventTypes){
           <h2>{eventDate}</h2>  
         </div>
         <div>
-          <button>Detalhes</button>
+          <ButtonDetails 
+            id_event={id_event}
+          />
         </div>
       </footer>   
     </section>
