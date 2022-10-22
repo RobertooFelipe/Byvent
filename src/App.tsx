@@ -6,6 +6,7 @@ import ListEvents from './pages/listEvents'
 import Dashboard from './pages/dashboard'
 import MyTickets from './pages/myTickets'
 import MyWallet from './pages/myWallet'
+import EventDetails from './pages/eventDetails';
 
 import { Routes, Route } from 'react-router-dom'
 
@@ -18,6 +19,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard />}/>
       <Route path='/myTickets' element={<MyTickets />}/>
       <Route path='/myWallet' element={<MyWallet />}/>
+      <Route path='/eventDetails' element={<EventDetails />}/>
     </Routes>
   );
 }
