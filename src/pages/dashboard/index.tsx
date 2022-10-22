@@ -5,7 +5,7 @@ function Dashboard() {
   return (
     <div className='containerApp'>
       <Sidebar />
-      <section className='hero'>
+      <section className='contentPage'>
         <h1>Área de dashboard...</h1>
       </section>
     </div>

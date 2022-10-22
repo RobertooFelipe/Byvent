@@ -5,7 +5,7 @@ function MyTickets() {
   return (
     <div className='containerApp'>
       <Sidebar />
-      <section className='hero'>
+      <section className='contentPage'>
         <h1>Meus tickets...</h1>
       </section>
     </div>

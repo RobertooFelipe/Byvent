@@ -5,7 +5,7 @@ function MyWallet() {
   return (
     <div className='containerApp'>
       <Sidebar />
-      <section className='hero'>
+      <section className='contentPage'>
         <h1>Minha carteira...</h1>
       </section>
     </div>
