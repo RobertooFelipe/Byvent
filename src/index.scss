@@ -4,7 +4,6 @@
 *{
   padding: 0;
   margin: 0;
-
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -12,9 +11,41 @@ button{
   cursor: pointer;
 }
 
+.contentPage{
+  padding: 70px 0 0 140px;
+
+  div h1{
+    font-size: 2rem;
+  }
+}
+
 .containerApp{
   width: 100vw;
   height: 100vh;
-
   background: $gradientLight
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $darkBlueColor;
+    border-radius: 4px;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
 }

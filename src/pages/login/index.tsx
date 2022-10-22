@@ -10,8 +10,8 @@ function Login() {
       <section>
         <img src={logo} alt="Byvent Logo" />
         <h1>Byvent</h1>
-
-        <NavButton route="/allEvents">
+        <NavButton 
+          route="/allEvents">
           Acessar sistema <img src={iconNext} alt="" />
         </NavButton>
       </section>

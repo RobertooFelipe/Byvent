@@ -5,8 +5,10 @@ function AddEvent() {
   return (
     <div className='containerApp'>
       <Sidebar />
-      <section className='hero'>
-        <h1>Criando item...</h1>
+      <section className='contentPage'>
+        <div>
+          <h1>Criando item...</h1>
+        </div>
       </section>
     </div>
   );

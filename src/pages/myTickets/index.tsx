@@ -5,8 +5,10 @@ function MyTickets() {
   return (
     <div className='containerApp'>
       <Sidebar />
-      <section className='hero'>
-        <h1>Meus tickets...</h1>
+      <section className='contentPage'>
+        <div>
+          <h1>Meus tickets...</h1>
+        </div>
       </section>
     </div>
   );
