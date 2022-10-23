@@ -20,6 +20,10 @@
     align-items: center;
 
     text-align: center;
+
+    @media (max-width: 768px) {
+      width: 80%;
+    }
     
     h1{
       background: -webkit-linear-gradient(45deg, #0C1B43,#0E3EBB);
