@@ -84,3 +84,19 @@
     gap: 10px;
   }
 }
+
+.selectImgEvent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  img{
+    height: 40px;
+  }
+
+  button{
+    background:transparent;
+    border-style: none;
+  }
+}

@@ -2,6 +2,7 @@ import './style.scss';
 import Sidebar from '../../components/Sidebar'
 import NavButton from '../../components/NavButton';
 import logo from '../../assets/images/byvent_logo.svg'
+import upload from '../../assets/images/icon_upload.svg'
 
 function AddEvent() {
   return (
@@ -41,6 +42,13 @@ function AddEvent() {
             <div>
               <h2>Descrição do evento</h2>
               <textarea name="description"></textarea>
+            </div>
+            <div>
+            <h2 className='selectImgEvent'>Selecione uma imagem
+              <button>
+                <img src={upload} alt="Upload" />
+              </button>
+            </h2>
             </div>
           </div>
           <div className='containerSendData'>
