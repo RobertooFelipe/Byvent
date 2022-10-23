@@ -16,6 +16,8 @@ import { Routes, Route } from 'react-router-dom'
 makeServer()
 
 function App() {
+  console.log(`test ${process.env.REACT_APP_API_BASE_URL}and node env: ${process.env.NODE_ENV}`);
+  
   return (
     <Routes>
       <Route path='/' element={<Login />}/>
