@@ -1,13 +1,19 @@
 import './App.scss';
 
+import { makeServer } from './services/miragejs'
+
 import Login from './pages/login'
 import AddEvent from './pages/addEvent'
 import ListEvents from './pages/listEvents'
 import Dashboard from './pages/dashboard'
 import MyTickets from './pages/myTickets'
 import MyWallet from './pages/myWallet'
+import EventDetails from './pages/eventDetails';
 
 import { Routes, Route } from 'react-router-dom'
+
+// Mock API for development without backend
+makeServer()
 
 function App() {
   return (
@@ -18,6 +24,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard />}/>
       <Route path='/myTickets' element={<MyTickets />}/>
       <Route path='/myWallet' element={<MyWallet />}/>
+      <Route path='/eventDetails/:id' element={<EventDetails />}/>
     </Routes>
   );
 }

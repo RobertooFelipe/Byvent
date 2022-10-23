@@ -1,7 +1,102 @@
 @import "/src/styles/colors";
 
-.containerApp{
-  width: 100vw;
-  height: 100vh;
-  background: $gradientLight
+.containerNewEvent{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 100px;
+
+  @media (max-width: 1082px) {
+    gap: 50px;
+    flex-direction: column;
+  }
+}
+
+.containerSendData{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+
+  gap: 30px;
+  margin: 50px;
+
+  @media (max-width: 1082px) {
+    width: 80%;
+    margin: 0;
+  }
+
+  img{
+    height: 200px;
+
+    @media (max-width: 1082px) {
+      height: 100px;
+    }
+  }
+}
+
+.infoEvent{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 90px;
+
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+  white-space: nowrap;
+
+  @media (max-width: 1082px) {
+    margin-left: 0;
+    width: 80%;
+  }
+
+  h2{
+    @media (max-width: 1082px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  div{
+    width: 100%;
+  }
+
+  input, textarea{
+    border-style: none;
+    border-radius: 30px;
+    padding: 11px;
+    border: solid 2px $darkBlueColor;
+
+    font-size: 18px;
+    width: 100%;
+    resize: none;
+  }
+}
+
+.inlineOption{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 120px;
+
+  @media (max-width: 1082px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.selectImgEvent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  img{
+    height: 40px;
+  }
+
+  button{
+    background:transparent;
+    border-style: none;
+  }
 }

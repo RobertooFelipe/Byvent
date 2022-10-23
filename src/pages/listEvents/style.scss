@@ -1,11 +1,5 @@
 @import "/src/styles/colors";
 
-.containerApp{
-  width: 100vw;
-  height: 100vh;
-  background: $gradientLight
-}
-
 .containerEvents{
   margin-top: 80px;
   display: flex;
@@ -16,4 +10,18 @@
   height: 70vh;
   overflow-y: scroll;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    height: 60vh
+  }
+}
+
+.headerPositionContent{
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+    flex-direction: column;
+  }
 }

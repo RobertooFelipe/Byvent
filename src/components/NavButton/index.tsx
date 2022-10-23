@@ -2,11 +2,12 @@ import './style.scss'
 import { useNavigate } from 'react-router-dom';
 import { ButtonHTMLAttributes } from 'react'
 
-interface LabeledValue extends ButtonHTMLAttributes<HTMLButtonElement>{
+interface INavButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
+  children: any;
   route: string;
 }
 
-function NavButton({route, children }: LabeledValue){
+function NavButton({route, children }: INavButtonProps){
 
   const navigate = useNavigate() 
 
@@ -14,7 +15,7 @@ function NavButton({route, children }: LabeledValue){
     navigate(route)
   }
   return(
-      <button className='btn' onClick={handleRouterButtons}>
+      <button className={`${children === 'Detalhes' ? 'detailsBurron' : 'btn'}`} onClick={handleRouterButtons}>
         {children}
       </button>
   )
