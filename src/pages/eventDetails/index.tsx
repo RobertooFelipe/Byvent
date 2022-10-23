@@ -1,7 +1,7 @@
 import './style.scss';
 import Sidebar from '../../components/Sidebar'
 
-import {default as dataEvents} from '../../events.json'
+import dataEvents from '../../services/miragejs/events.json'
 import { useParams } from "react-router-dom";
 
 interface IEventDetailsProps{

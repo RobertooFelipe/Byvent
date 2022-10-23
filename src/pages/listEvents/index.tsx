@@ -2,9 +2,8 @@ import './style.scss';
 import Sidebar from '../../components/Sidebar'
 import CardEvent from '../../components/CardEvent';
 import SearchItem from '../../components/SearchItem'
-
-import {default as dataEvents} from '../../events.json'
-import { useState } from 'react'
+import { api } from '../../services/api'
+import { useEffect, useState } from 'react';
 
 interface ICardEventProps{
   id_event: number;
@@ -13,10 +12,20 @@ interface ICardEventProps{
   eventDate:string;
 }
 
-
 function ListEvents() {
 
-  const [event] = useState<ICardEventProps[]>(dataEvents);
+  const [events, setEvents] = useState<ICardEventProps[]>([]);
+  const [ isFetching, setIsFetching ] = useState(false)
+
+  const getEvents = () => {
+    setIsFetching(true)
+    api.get('events').then(({data}) => {
+      setEvents(data)
+      setIsFetching(false)
+    })
+  }
+
+  useEffect(() => getEvents(), [])
 
   return (
     <div className='containerApp'>
@@ -28,8 +37,8 @@ function ListEvents() {
         </header>
         <div className='containerEvents'>
           <>
-            {
-              event.map((data) => 
+            { !isFetching?
+              events.map((data) => 
                   <CardEvent 
                     key={data.id_event}
                     id_event={data.id_event}
@@ -37,7 +46,7 @@ function ListEvents() {
                     imgSrc={data.imgSrc} 
                     eventDate={data.eventDate}
                   />         
-              )
+              ): <span>Loading...</span>
             }
           </>
         </div>

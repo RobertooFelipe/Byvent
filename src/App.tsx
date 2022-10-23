@@ -1,5 +1,7 @@
 import './App.scss';
 
+import { makeServer } from './services/miragejs'
+
 import Login from './pages/login'
 import AddEvent from './pages/addEvent'
 import ListEvents from './pages/listEvents'
@@ -9,6 +11,9 @@ import MyWallet from './pages/myWallet'
 import EventDetails from './pages/eventDetails';
 
 import { Routes, Route } from 'react-router-dom'
+
+// Mock API for development without backend
+makeServer()
 
 function App() {
   return (
