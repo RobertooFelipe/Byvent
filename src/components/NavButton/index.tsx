@@ -2,13 +2,12 @@ import './style.scss'
 import { useNavigate } from 'react-router-dom';
 import { ButtonHTMLAttributes } from 'react'
 
-interface LabeledValue extends ButtonHTMLAttributes<HTMLButtonElement>{
+interface INavButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   children: any;
   route: string;
-  id_event?: number;
 }
 
-function NavButton({route, children, id_event }: LabeledValue){
+function NavButton({route, children }: INavButtonProps){
 
   const navigate = useNavigate() 
 
