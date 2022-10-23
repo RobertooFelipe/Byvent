@@ -1,0 +1,20 @@
+@import "/src/styles/colors";
+
+.soldEvent{
+  background-color: $darkBlueColor;
+  width: 70%;
+  padding: 20px 0;
+  border-radius: 25px;
+
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex-direction: row;
+
+  p{
+    color: $whiteColor;
+    font-weight: 400;
+  }
+}
