@@ -19,7 +19,7 @@ function CardEvent({id_event, eventName, imgSrc, eventDate}:ICardEventProps){
           <h2>{eventDate}</h2>  
         </div>
         <div>
-          <NavButton route='/eventDetails' id_event={id_event}>
+          <NavButton route={`/eventDetails/${id_event}`}>
             Detalhes
           </NavButton>
         </div>
