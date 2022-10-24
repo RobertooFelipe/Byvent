@@ -57,6 +57,7 @@ function MyTickets() {
                       eventName={data.eventName}
                       imgSrc={data.imgSrc} 
                       eventDate={data.eventDate}
+                      modal={true}
                     />         
                 ): <span>Loading...</span>
               }
