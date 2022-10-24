@@ -14,13 +14,16 @@ interface ICardEventProps{
   eventName:string;
   imgSrc:string;
   eventDate:string;
+  priceEvent:string;
 }
 
 function Dashboard() {
 
   const [events, setEvents] = useState<ICardEventProps[]>([]);
+  const [log, setLog] = useState<ICardEventProps[]>([]);
   const [eventsFilter, setEventsFilter] = useState<ICardEventProps[]>([]);
   const [ isFetching, setIsFetching ] = useState(false)
+  const [ isFetchingLog, setIsFetchingLog ] = useState(false)
 
   const getEvents = () => {
     setIsFetching(true)
@@ -31,10 +34,21 @@ function Dashboard() {
     })
   }
 
-  useEffect(() => getEvents(), [])
+  const getLogs = () => {
+    setIsFetchingLog(true)
+    api.get('log').then(({data}) => {
+      setLog(data)
+      setIsFetchingLog(false)
+    })
+  }
+
+  useEffect(() => {
+    getEvents()
+    getLogs()
+  },[])
 
   const handleFindItem = (inputValue:string) => {
-    const eventDetail = events.filter(item => item.eventName.includes(inputValue) || inputValue === '')
+    const eventDetail = events.filter(item => item.eventName.includes(inputValue))
     setEventsFilter(eventDetail);
   }
 
@@ -62,7 +76,7 @@ function Dashboard() {
                       modal={true}
                       admOption={true}
                     />         
-                ): <span>Loading...</span>
+                ):<span>Loading...</span>
               }
             </>
           </div>
@@ -76,38 +90,14 @@ function Dashboard() {
             <div className='listEventsSold'>
               <h2>Ingressos vendidos</h2>
               <section className='listHistSold'>
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Teste'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
+                {!isFetchingLog?
+                  log.map((data) => 
+                  <SoldEvent
+                    key={data.id_event}
+                    eventPrice={data.priceEvent}
+                    eventName={data.eventName}       
+                  />
+                ):<span>Loading...</span>}
               </section>
               <div className='buttonWalletContent'>
                 <NavButton route='/myWallet'>

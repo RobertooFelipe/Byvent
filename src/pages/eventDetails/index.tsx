@@ -3,7 +3,7 @@ import Sidebar from '../../components/Sidebar'
 import NavButton from '../../components/NavButton';
 import logo from '../../assets/images/byvent_qr_code.svg'
 
-import dataEvents from '../../services/miragejs/eventsData/events.json'
+import dataEvents from '../../services/miragejs/server/events.json'
 import { useParams } from "react-router-dom";
 
 interface IEventDetailsProps{
