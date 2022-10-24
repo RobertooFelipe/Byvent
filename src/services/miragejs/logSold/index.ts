@@ -2,7 +2,7 @@ import { createServer } from "miragejs"
 import log from './logSold.json'
 
 
-export function makeServer() {
+export function logServer() {
   return createServer({
     seeds(server) {
       server.db.loadData({ log })
