@@ -1,0 +1,42 @@
+[
+  {
+    "id_event": 1,
+    "eventName": "Formatura",
+    "priceEvent": "R$45,00"
+  },
+  {
+    "id_event": 2,
+    "eventName": "Festa Formatura",
+    "priceEvent": "R$25,00"
+  },
+  {
+    "id_event": 3,
+    "eventName": "Encontro da Madrugada",
+    "priceEvent": "R$55,00"
+  },
+  {
+    "id_event": 4,
+    "eventName": "Halloween Day",
+    "priceEvent": "R$20,00"
+  },  
+  {
+    "id_event": 5,
+    "eventName": "Interclasse",
+    "priceEvent": "R$20,00"
+  },  
+  {
+    "id_event": 6,
+    "eventName": "Balada Universitária",
+    "priceEvent": "R$10,00"
+  },  
+  {
+    "id_event": 7,
+    "eventName": "Metal Rock Empresarial",
+    "priceEvent": "R$45,00"
+  },  
+  {
+    "id_event": 8,
+    "eventName": "Rave Eletrônica Escolas",
+    "priceEvent": "R$20,00"
+  }
+]
