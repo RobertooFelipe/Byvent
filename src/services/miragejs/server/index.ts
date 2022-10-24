@@ -1,11 +1,12 @@
 import { createServer } from "miragejs"
+import log from './logSold.json'
 import events from './events.json'
 
 
-export function makeServer() {
+export function logServer() {
   return createServer({
     seeds(server) {
-      server.db.loadData({ events })
+      server.db.loadData({ log,events })
     },
     routes() {
       this.namespace = "/api"
@@ -15,10 +16,8 @@ export function makeServer() {
         return schema.db.events
       })
 
-      this.post("/events", (schema, request) => {
-        let attrs = JSON.parse(request.requestBody)
-
-        return schema.db.events.insert(attrs)
+      this.get("/log", (schema) => {
+        return schema.db.log
       })
     },
   })

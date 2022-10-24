@@ -1,0 +1,113 @@
+@import "/src/styles/colors";
+
+.detailsBurron{
+  background-color: $whiteColor;
+  border-style: none;
+  padding: 8px 15px;
+  border-radius: 30px;
+  
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.imgEvent{
+  height: 350px;
+  border-radius: 30px;
+  
+  @media (max-width: 768px) {
+    height: 170px;
+  }
+}
+
+.infoEventModal{
+  margin: 40px;
+  color: $whiteColor;
+    
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+  p{
+    margin-top: 20px;
+    width: 400px;
+  
+    @media (max-width: 768px) {
+      width: 250px;
+    }
+  }
+}
+
+.containerModal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  .containerQRcode, .containerAdmQRcode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $whiteColor;
+
+    margin-right: 20px;
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
+
+    img{
+      height: 100px;
+    }
+
+    button{
+      background: $whiteColor;
+      border-radius: 20px;
+      padding: 8px 10px;
+      font-size: 18px;
+
+      border-style: none;
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+
+      gap: 5px;
+
+      img{       
+        height: 30px;
+      }
+    }
+  }
+
+  .containerAdmQRcode{
+    @media (max-width: 768px) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+}
+
+.priceTicket{
+  font-size: 30px;
+}
+
+.buttonInLine{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}

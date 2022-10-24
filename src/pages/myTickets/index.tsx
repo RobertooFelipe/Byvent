@@ -32,7 +32,7 @@ function MyTickets() {
   useEffect(() => getEvents(), [])
 
   const handleFindItem = (inputValue:string) => {
-    const eventDetail = events.filter(item => item.eventName.includes(inputValue) || inputValue === '')
+    const eventDetail = events.filter(item => item.eventName.includes(inputValue))
     setEventsFilter(eventDetail);
   }
 
@@ -57,6 +57,7 @@ function MyTickets() {
                       eventName={data.eventName}
                       imgSrc={data.imgSrc} 
                       eventDate={data.eventDate}
+                      modal={true}
                     />         
                 ): <span>Loading...</span>
               }

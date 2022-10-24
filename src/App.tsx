@@ -1,6 +1,6 @@
 import './App.scss';
 
-import { makeServer } from './services/miragejs'
+import { logServer } from './services/miragejs/server'
 
 import Login from './pages/login'
 import AddEvent from './pages/addEvent'
@@ -13,11 +13,9 @@ import EventDetails from './pages/eventDetails';
 import { Routes, Route } from 'react-router-dom'
 
 // Mock API for development without backend
-makeServer()
+logServer()
 
 function App() {
-  console.log(`test ${process.env.REACT_APP_API_BASE_URL}and node env: ${process.env.NODE_ENV}`);
-  
   return (
     <Routes>
       <Route path='/' element={<Login />}/>
