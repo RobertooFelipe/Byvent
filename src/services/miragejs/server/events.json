@@ -8,35 +8,35 @@
   },
   {
     "id_event": 2,
-    "eventName": "Baile Formatue",
+    "eventName": "Festa Formatura",
     "imgSrc": "../../teste.svg",
     "eventDate": "16 de agosto de 2022",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure tempore suscipit fuga odit recusandae harum consectetur repellendus repudiandae maiores amet numquam veritatis provident dolorum architecto, consequuntur, excepturi obcaecati quod?"
   },
   {
     "id_event": 3,
-    "eventName": "Palestra",
+    "eventName": "Halloween Day",
     "imgSrc": "../../teste.svg",
     "eventDate": "18 de outubro de 2022",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure tempore suscipit fuga odit recusandae harum consectetur repellendus repudiandae maiores amet numquam veritatis provident dolorum architecto, consequuntur, excepturi obcaecati quod?"
   },
   {
     "id_event": 4,
-    "eventName": "Halloween",
+    "eventName": "Balada Universitária",
     "imgSrc": "../../teste.svg",
     "eventDate": "23 de agosto de 2022",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure tempore suscipit fuga odit recusandae harum consectetur repellendus repudiandae maiores amet numquam veritatis provident dolorum architecto, consequuntur, excepturi obcaecati quod?"
   },  
   {
     "id_event": 5,
-    "eventName": "Diversão",
+    "eventName": "Metal Rock Empresarial",
     "imgSrc": "../../teste.svg",
     "eventDate": "01 de janeiro de 2023",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure tempore suscipit fuga odit recusandae harum consectetur repellendus repudiandae maiores amet numquam veritatis provident dolorum architecto, consequuntur, excepturi obcaecati quod?"
   },  
   {
     "id_event": 6,
-    "eventName": "Balada Empresa",
+    "eventName": "Encontro da Madrugada",
     "imgSrc": "../../teste.svg",
     "eventDate": "18 de outubro de 2022",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure tempore suscipit fuga odit recusandae harum consectetur repellendus repudiandae maiores amet numquam veritatis provident dolorum architecto, consequuntur, excepturi obcaecati quod?"
