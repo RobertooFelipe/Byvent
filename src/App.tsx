@@ -1,7 +1,6 @@
 import './App.scss';
 
-import { makeServer } from './services/miragejs/eventsData'
-import { logServer } from './services/miragejs/logSold'
+import { logServer } from './services/miragejs/server'
 
 import Login from './pages/login'
 import AddEvent from './pages/addEvent'
@@ -14,7 +13,6 @@ import EventDetails from './pages/eventDetails';
 import { Routes, Route } from 'react-router-dom'
 
 // Mock API for development without backend
-makeServer()
 logServer()
 
 function App() {
