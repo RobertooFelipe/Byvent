@@ -59,6 +59,8 @@ function Dashboard() {
                       eventName={data.eventName}
                       imgSrc={data.imgSrc} 
                       eventDate={data.eventDate}
+                      modal={true}
+                      admOption={true}
                     />         
                 ): <span>Loading...</span>
               }
