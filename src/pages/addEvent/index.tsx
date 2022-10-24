@@ -43,12 +43,11 @@ function AddEvent() {
               <h2>Descrição do evento</h2>
               <textarea name="description"></textarea>
             </div>
-            <div>
-            <h2 className='selectImgEvent'>Selecione uma imagem
+            <div className='uploadImage'>
+              <h2 className='selectImgEvent'>Selecione uma imagem</h2>
               <button>
                 <img src={upload} alt="Upload" />
               </button>
-            </h2>
             </div>
           </div>
           <div className='containerSendData'>
