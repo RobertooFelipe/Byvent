@@ -5,7 +5,32 @@ import NavButton from '../../components/NavButton';
 import banckIcon from '../../assets/images/icon_bank.svg';
 import moneyIcon from '../../assets/images/icon_money.svg'
 
+import { api } from '../../services/api'
+import { useEffect, useState } from 'react';
+
+interface ICardEventProps{
+  id_event: number;
+  eventName:string;
+  priceEvent:string;
+}
+
 function MyWallet() {
+
+  const [log, setLog] = useState<ICardEventProps[]>([]);
+  const [ isFetchingLog, setIsFetchingLog ] = useState(false)
+
+  const getLogs = () => {
+    setIsFetchingLog(true)
+    api.get('log').then(({data}) => {
+      setLog(data)
+      setIsFetchingLog(false)
+    })
+  }
+
+  useEffect(() => {
+    getLogs()
+  },[])
+
   return (
     <div className='containerApp'>
       <Sidebar />
@@ -50,38 +75,14 @@ function MyWallet() {
             <div className='listEventsSold'>
               <h2>Ingressos vendidos</h2>
               <section className='listHistSold'>
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Teste'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
-                <SoldEvent
-                  eventPrice='15,45'
-                  eventName='Testaaaaaaaaae'           
-                />
+              {!isFetchingLog?
+                  log.map((data) => 
+                  <SoldEvent
+                    key={data.id_event}
+                    eventPrice={data.priceEvent}
+                    eventName={data.eventName}       
+                  />
+                ):<span>Loading...</span>}
               </section>
             </div>
           </div>
